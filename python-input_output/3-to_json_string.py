@@ -1,20 +1,19 @@
 #!/usr/bin/python3
 """
-This module provides a function that appends a string to a UTF-8 text file.
+Module that contains a function to convert a Python object to a JSON string.
 """
 
+import json
 
-def append_write(filename="", text=""):
+
+def to_json_string(my_obj):
     """
-    Appends a string at the end of a text file (UTF8) and returns
-    the number of characters added.
+    Returns the JSON representation of an object (string).
 
     Args:
-        filename (str): Name of the file.
-        text (str): Text to append.
+        my_obj (any): The Python object to be serialized.
 
     Returns:
-        int: Number of characters added to the file.
+        str: JSON string representation of the object.
     """
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+    return json.dumps(my_obj)
