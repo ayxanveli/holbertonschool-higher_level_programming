@@ -19,4 +19,3 @@ items.extend(sys.argv[1:])
 
 # Yenilənmiş siyahını fayla yaz
 save_to_json_file(items, filename)
-
